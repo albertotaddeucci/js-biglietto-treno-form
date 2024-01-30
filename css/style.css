@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #b91450;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1,
+h2{
+    padding-block: 1em;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 1em;
+    background-color: white;
+    
+}
+
+/* -------------------------------- section 1 ------------------------------- */
+
+#inputs{
+    border-radius: 10px;
+    color: #b91450;    
+    
+}
+
+
+#userdata{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 2em;
+}
+
+#userdata > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 30%;
+}
+
+#userdata input{
+    padding: 0.3em;
+    border: 1px solid #b91450;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* -------------------------------- section 2 ------------------------------- */
+h3{
+    text-align: start;
+    text-transform: uppercase;
+    
+}
+
+#ticket{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+
+    text-align: start;
+    
+}
+
+#nameticket{
+    width: 200px;
+    padding: 1em;
+    background-color: gray;
+   
+}
+
+#ticketdata{
+    display: flex;
+    flex-grow: 1;
+}
+
+#ticketdata > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    padding: 1em;
+    width: calc(100% / 4);
+}
+

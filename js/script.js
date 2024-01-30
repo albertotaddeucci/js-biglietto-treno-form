@@ -1,14 +1,19 @@
-const buttonElement = document.querySelector("#button");
-const inputDistanceElement = document.querySelector("#inputkm");
-const inputAgeElement = document.querySelector("#inputage");
-const inputName = document.querySelector("#inputname");
+const buttonElement = document.querySelector("#generate");
+let inputDistanceElement = document.querySelector("#inputkm");
+let inputAgeElement = document.querySelector("#inputage");
+let inputName = document.querySelector("#inputname");
+const buttonCancelElement = document.querySelector("#cancel");
+
 
 
 
 buttonElement.addEventListener("click",
 function(){
-        let distance = inputDistanceElement.value
-        let userAge = inputAgeElement.value
+
+        const coach = Math.floor(Math.random() * 9) + 1;
+        const codeCp = Math.floor(Math.random() * 999) + 9000;
+        const distance = inputDistanceElement.value
+        const userAge = inputAgeElement.value
         const userName = inputName.value
 
         let errorHappened = false
@@ -50,13 +55,38 @@ function(){
         // messaggio errore o visualizzazione a schermo prezzo
         if (!errorHappened){
             document.getElementById("ticketprice").innerHTML = 
-            `<b>${finalPrice.toFixed(2)}€</b>`
+            `${finalPrice.toFixed(2)}€`;
+            document.getElementById("coach").innerHTML = `${coach}`
+            document.getElementById("cp-code").innerHTML = `${codeCp}`
+
+
         } else {
             document.getElementById("ticketprice").innerHTML = "Errore"
         }
-
-             
+                     
         document.getElementById("username").innerHTML = `${userName}`
+
+        if (discountPrice>0){
+            document.getElementById("offer").innerHTML = "Biglietto scontato"
+
+        } else {
+            document.getElementById("offer").innerHTML = "Biglietto standard"
+
+        }
+
+
+        
+
+    }
+)
+
+
+buttonCancelElement.addEventListener("click",
+    function(){
+        document.querySelector("#inputname").value = "";
+        document.querySelector("#inputkm").value = "";
+        document.querySelector("#inputage").value = "";
+
 
     }
 )
