@@ -30,6 +30,19 @@ section{
     
 }
 
+button{
+    padding: 5px;
+    border: 2px solid #b91450;
+    color: #b91450;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover{
+    border: 2px solid orange;
+}
+
 /* -------------------------------- section 1 ------------------------------- */
 
 #inputs{
@@ -64,7 +77,7 @@ section{
 h3{
     text-align: start;
     text-transform: uppercase;
-    
+
 }
 
 #ticket{
@@ -73,14 +86,24 @@ h3{
     flex-grow: 1;
 
     text-align: start;
+
+    border-top: 2px solid #b91450;
+    border-bottom: 2px solid #b91450;
     
 }
+
 
 #nameticket{
     width: 200px;
     padding: 1em;
     background-color: gray;
+    font-weight: bold;
    
+}
+
+#nameticket span:first-child{
+    text-transform: uppercase;
+    
 }
 
 #ticketdata{

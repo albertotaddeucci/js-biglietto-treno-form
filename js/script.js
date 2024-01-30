@@ -8,13 +8,13 @@ const buttonCancelElement = document.querySelector("#cancel");
 
 
 buttonElement.addEventListener("click",
-function(){
+    function(){
 
-        const coach = Math.floor(Math.random() * 9) + 1;
-        const codeCp = Math.floor(Math.random() * 999) + 9000;
-        const distance = inputDistanceElement.value
-        const userAge = inputAgeElement.value
-        const userName = inputName.value
+        let coach = Math.floor(Math.random() * 9) + 1;
+        let codeCp = Math.floor(Math.random() * 999) + 9000;
+        let distance = inputDistanceElement.value
+        let userAge = inputAgeElement.value
+        let userName = inputName.value
 
         let errorHappened = false
     
@@ -52,33 +52,45 @@ function(){
         const finalPrice = ticketPrice - discountPrice;
 
 
+        
+        if (discountPrice>0){
+            document.getElementById("offer").innerHTML = "Biglietto scontato"
+            
+        } else {
+            document.getElementById("offer").innerHTML = "Biglietto standard"
+            
+        }
+        
+        if (userName === "" || !isNaN(userName)){
+            alert("Devi inserire un nome!")
+            errorHappened = true
+            
+        } else {
+            document.getElementById("username").innerHTML = `${userName}`
+        }
+        
         // messaggio errore o visualizzazione a schermo prezzo
         if (!errorHappened){
             document.getElementById("ticketprice").innerHTML = 
             `${finalPrice.toFixed(2)}€`;
             document.getElementById("coach").innerHTML = `${coach}`
             document.getElementById("cp-code").innerHTML = `${codeCp}`
-
-
+            
+            
+            
         } else {
             document.getElementById("ticketprice").innerHTML = "Errore"
-        }
-                     
-        document.getElementById("username").innerHTML = `${userName}`
-
-        if (discountPrice>0){
-            document.getElementById("offer").innerHTML = "Biglietto scontato"
-
-        } else {
-            document.getElementById("offer").innerHTML = "Biglietto standard"
+            document.getElementById("offer").innerHTML = ""
 
         }
-
-
         
+       
 
     }
 )
+        
+
+    
 
 
 buttonCancelElement.addEventListener("click",
