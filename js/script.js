@@ -1,17 +1,19 @@
 const buttonElement = document.querySelector("#button");
+const inputDistanceElement = document.querySelector("#inputkm");
+const inputAgeElement = document.querySelector("#inputage");
 
-// prova
-const titleElement = document.querySelector("h1");
+
+
 
 buttonElement.addEventListener("click",
-    function(){
-        // prova
-        titleElement.innerText = "ciao"
-
+function(){
+        const distance = inputDistanceElement.value
+        const userAge = inputAgeElement.value
+    
         // algoritmo
 
-        const userAge = 15;
-        const distance = 100;
+        // const userAge = 15;
+        // const distance = 100;
         // let userYear = prompt("Inserisci anno di nascita (formato: YYYY)");
 
        
