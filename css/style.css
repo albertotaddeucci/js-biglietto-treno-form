@@ -47,7 +47,8 @@ button:hover{
 
 #inputs{
     border-radius: 10px;
-    color: #b91450;    
+    color: #b91450;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
 }
 
@@ -119,3 +120,7 @@ h3{
     width: calc(100% / 4);
 }
 
+#username{
+    text-transform: capitalize;
+
+}
